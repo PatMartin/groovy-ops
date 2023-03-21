@@ -78,10 +78,10 @@ public class GroovyTemplate extends BaseOp<GroovyTemplate>
     }
   }
   
-  public GroovyTemplate close() throws OpsException
+  public List<OpData> close() throws OpsException
   {
     render();
-    return this;
+    return OpData.emptyList();
   }
 
   public GroovyTemplate templatePath(String templatePath)
