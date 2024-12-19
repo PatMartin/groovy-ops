@@ -22,13 +22,13 @@ import groovy.lang.GroovyShell;
 import lombok.Getter;
 import lombok.Setter;
 import picocli.CommandLine.Command;
-import picocli.CommandLine.Option;
+import picocli.CommandLine.Parameters;
 
 @AutoService(NodeOp.class) @Command(name = "eval",
     mixinStandardHelpOptions = false, description = "Evaluate an expression.")
 public class Eval extends BaseNodeOp<Eval>
 {
-  @Option(names = { "-x", "-expression" },
+  @Parameters(index = "0", arity = "1",
       description = "The expression to evaluate.")
   private @Getter @Setter String expression;
 

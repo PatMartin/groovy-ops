@@ -26,7 +26,7 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
 @AutoService(Op.class)
-@Command(name = "groovy:template", description = "Render a Groovy template.")
+@Command(name = "groovy-template", description = "Render a Groovy template.")
 public class GroovyTemplate extends BaseOp<GroovyTemplate>
 {
   @Option(names = { "-t", "--template" }, description = "The template.")
@@ -39,7 +39,7 @@ public class GroovyTemplate extends BaseOp<GroovyTemplate>
 
   public GroovyTemplate()
   {
-    super("groovy:template");
+    super("groovy-template");
   }
 
   public GroovyTemplate open() throws OpsException
